@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WebProject2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置Servlet的信息 -->
+  <servlet>
+  	<!-- 在Servlet起名称（值是任意的） -->
+  	<servlet-name>ServletDemo1</servlet-name>
+  	<!-- 配置Servlet类的包名+类名（Class.forName("包名+类名")） -->
+  	<servlet-class>cn.itcast.servlet.ServletDemo1</servlet-class>
+  </servlet>
+  
+  <!-- 配置访问路径 -->
+  <servlet-mapping>
+  	<!-- 配置Servlet的名称（注意：servlet-mapping的节点下的servlet-name必须和servlet节点下的servlet-name一致） -->
+	<servlet-name>ServletDemo1</servlet-name>
+	<!-- 配置Servlet的访问路径（值有三种写法），想访问ServletDemo1的程序：http://localhost:8080/test/demo1 -->
+	<!-- 如果改路径必须重启服务 -->
+	<url-pattern>/demo1</url-pattern>  
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ServletDemo2</servlet-name>
+  	<servlet-class>cn.itcast.servlet.ServletDemo2</servlet-class>
+  	<load-on-startup>3</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ServletDemo2</servlet-name>
+	<url-pattern>/demo2</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ServletTemplate</servlet-name>
+  	<servlet-class>cn.itcast.servlet.ServletTemplate</servlet-class>
+  	<!-- 自动加载：服务器一启动，默认加载该类  值是正整数 ，值越小，优先级就越高。 -->
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ServletTemplate</servlet-name>
+	<url-pattern>/template</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletConfigDemo</servlet-class>
+    <!-- 配置初始化参数 -->
+    <init-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </init-param>
+    <init-param>
+        <param-name>password</param-name>
+        <param-value>123</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <url-pattern>/configDemo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ServletContext</servlet-name>
+  	<servlet-class>cn.itcast.context.ServletContextDemo</servlet-class>
+  	<load-on-startup>4</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ServletContext</servlet-name>
+	<url-pattern>/context</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>CountServlet</servlet-name>
+  	<servlet-class>cn.itcast.context.CountServlet</servlet-class>
+  	<load-on-startup>5</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>CountServlet</servlet-name>
+	<url-pattern>/count</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowServlet</servlet-name>
+  	<servlet-class>cn.itcast.context.ShowServlet</servlet-class>
+  	<load-on-startup>6</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ShowServlet</servlet-name>
+	<url-pattern>/show</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ReadServlet</servlet-name>
+  	<servlet-class>cn.itcast.context.ReadServlet</servlet-class>
+  	<load-on-startup>6</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ReadServlet</servlet-name>
+	<url-pattern>/read</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 配置全局的初始化参数 -->
+  <context-param>
+  	<param-name>encoding</param-name>
+  	<param-value>UTF-8</param-value>
+  </context-param>
+  
+</web-app>
