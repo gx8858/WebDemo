@@ -10,11 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 向ServletContext获取值，再存入值
+ * 
  * @author AOCNPD
- *
+ * 
  */
 public class CountServlet extends HttpServlet {
-	
+
 	@Override
 	public void init() throws ServletException {
 		// 向ServletContext对象中存入一个变量，初始化值是0
@@ -31,12 +32,14 @@ public class CountServlet extends HttpServlet {
 		// 从域对象取出变量
 		Integer count = (Integer) context.getAttribute("count");
 		// 让count自增
-		count ++;
+		count++;
 		// 存入值
 		context.setAttribute("count", count);
-//		resp.getWriter().print(count);
+		// 显示到页面上
+		resp.setContentType("text/html;charset=UTF-8");
+		resp.getWriter().print("该网站一共被访问了" + count + "次");
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
