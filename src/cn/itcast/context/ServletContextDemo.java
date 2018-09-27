@@ -13,6 +13,10 @@ public class ServletContextDemo extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		/**
+		 * 读取web.xml文件中的  配置全局的初始化参数
+		 * <context-param>标签
+		 */
 		ServletContext context = this.getServletContext();
 		String encoding = context.getInitParameter("encoding");
 		System.out.println("设置的编码为：" + encoding);
