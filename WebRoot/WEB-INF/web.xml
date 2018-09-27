@@ -15,7 +15,7 @@
   	<!-- 在Servlet起名称（值是任意的） -->
   	<servlet-name>ServletDemo1</servlet-name>
   	<!-- 配置Servlet类的包名+类名（Class.forName("包名+类名")） -->
-  	<servlet-class>cn.itcast.servlet.ServletDemo1</servlet-class>
+  	<servlet-class>cn.itcast.config.ServletDemo1</servlet-class>
   </servlet>
   
   <!-- 配置访问路径 -->
@@ -29,7 +29,7 @@
   
   <servlet>
   	<servlet-name>ServletDemo2</servlet-name>
-  	<servlet-class>cn.itcast.servlet.ServletDemo2</servlet-class>
+  	<servlet-class>cn.itcast.config.ServletDemo2</servlet-class>
   	<load-on-startup>3</load-on-startup>
   </servlet>
   
@@ -40,7 +40,7 @@
   
    <servlet>
   	<servlet-name>ServletTemplate</servlet-name>
-  	<servlet-class>cn.itcast.servlet.ServletTemplate</servlet-class>
+  	<servlet-class>cn.itcast.config.ServletTemplate</servlet-class>
   	<!-- 自动加载：服务器一启动，默认加载该类  值是正整数 ，值越小，优先级就越高。 -->
   	<load-on-startup>2</load-on-startup>
   </servlet>
@@ -52,7 +52,7 @@
   
   <servlet>
     <servlet-name>ServletConfigDemo</servlet-name>
-    <servlet-class>cn.itcast.servlet.ServletConfigDemo</servlet-class>
+    <servlet-class>cn.itcast.config.ServletConfigDemo</servlet-class>
     <!-- 配置初始化参数 -->
     <init-param>
         <param-name>username</param-name>

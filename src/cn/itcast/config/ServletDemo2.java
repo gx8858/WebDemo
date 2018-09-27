@@ -1,4 +1,4 @@
-package cn.itcast.servlet;
+package cn.itcast.config;
  
 import java.io.IOException;
  
