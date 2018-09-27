@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 向ServletContext获取值，再存入值
- * 
- * @author AOCNPD
- * 
  */
 public class CountServlet extends HttpServlet {
 
