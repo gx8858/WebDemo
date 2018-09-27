@@ -10,10 +10,12 @@ import java.util.Properties;
 public class ReadDB {
 
 	public void read1() throws IOException {
+		
 		// 获取类的加载器，通过class对象
 		// 只能写相对路径
 		// 只能读取src目录下的内容
 		// getClassLoader()相当于到classes这一层目录
+		
 		InputStream in = ReadDB.class.getClassLoader().getResourceAsStream("db.properties");
 		Properties pro = new Properties();
 		pro.load(in);
