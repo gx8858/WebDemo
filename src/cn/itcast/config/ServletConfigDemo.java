@@ -15,9 +15,8 @@ public class ServletConfigDemo extends HttpServlet {
 	/**
 	 * ServletConfig对象的方法
 	 * 1.String getServletName() 		获取配置Servlet的名称（<servlet-name>ServletDemo</servlet-name>） 
-	 * 2.String getInitParameter(String name)  	获取初始化参数
+	 * 2.String getInitParameter(String name)  		获取初始化参数
  	 * 3.Enumeration getInitParameterNames()  		获取初始化参数
-	 *	
 	 * 4.ServletContext getServletContext()  		获取ServletContext对象
 	 */
 	@Override
